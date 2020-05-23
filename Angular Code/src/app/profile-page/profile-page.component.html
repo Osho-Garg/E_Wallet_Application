@@ -1,0 +1,31 @@
+<div>
+    <h3><i class='fas fa-wallet' style='font-size:36px'></i>eWallet</h3>
+    <div class="profile">
+        <h6>{{userName}}&nbsp;&nbsp;<img class="imageclass" src="../../assets/images/avatar.png" width=35>
+            <button (click)="logout()" id="butn" class="logoutbtn">Logout</button></h6>
+    </div>
+    <br/>
+    <hr>
+    <div>
+        <div class="card">
+            <div  class="container"
+                id="profileContainer">
+                <div class="profileData">
+                    <p><strong>Name :&nbsp;&nbsp;</strong>{{userName}}</p>
+                    <br />
+                    <p><strong>User ID :&nbsp;&nbsp;</strong>{{allProfileData.id}}</p>
+                    <br />
+                    <p><strong>Account ID :&nbsp;&nbsp;</strong>{{allProfileData.wallet.accountId}}</p>
+                    <br />
+                    <p><strong>Email :&nbsp;&nbsp;</strong>{{allProfileData.emailId}}</p>
+                    <br />
+                    <p><strong>Phone :&nbsp;&nbsp;</strong>{{allProfileData.phone}}</p>
+                </div>
+                <button routerLink="/wallet-dashboard" type="button" class="close" aria-label="Close"
+         Style="position: absolute;left: 95%;top: 2px;">
+         <span aria-hidden="true">&times;</span>
+       </button>
+            </div>
+        </div>
+    </div>
+</div>

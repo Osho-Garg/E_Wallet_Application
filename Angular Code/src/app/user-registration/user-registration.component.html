@@ -1,0 +1,76 @@
+<div>
+  <h3><i class='fas fa-wallet' style='font-size:36px'></i>eWallet</h3>
+  
+  <br/>
+  <hr>
+  <div>
+      <div class="cardalign">
+        <div class="container card" style="margin: 20px;">
+    
+    
+          <div style="margin: auto;padding: 20px;">
+            <h4 style="margin-bottom: 40px;">User registration form</h4>
+            <form #userData="ngForm" novalidate>
+    
+    
+              <div class="form-group">
+                <label >Username</label>
+                <input type="text" #username="ngModel" required class="form-control"
+                 style="width:500px;height:30px;"
+                  name="Username" [(ngModel)]='userDetailsModel.userName'>
+                <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is
+                  required ( It should not be Null !) </small>
+              </div>
+    
+    
+              
+              <div class="form-group" >
+                <label >Email</label>
+                <input required email type="text" class="form-control" name="email"
+                        [(ngModel)]="userDetailsModel.emailId" #email="ngModel">
+                <small class="text-danger" *ngIf="email.errors?.required && email.touched">
+                  Email is required ( It should not be Null !)
+                </small>
+                <small class="text-danger" *ngIf="email.errors?.email && email.touched">
+                  Email is Invalid ( Please Enter Valid Email )
+                </small>
+              </div>
+              <div class="form-group">
+                <label>phone No</label>
+                <input type="text" class="form-control" style="width:500px;height: 30px;" #phoneno="ngModel"  required pattern="[0123456789][0-9]{9}" name="phone" [(ngModel)]='userDetailsModel.phoneNo'>
+               
+              <small class="text-danger" *ngIf="phoneno.errors?.required && phoneno.touched">
+                PhoneNo is required ( It should not be Null !)
+              </small>
+              <small class="text-danger" *ngIf="phoneno.errors?.pattern && phoneno.touched">
+                PhoneNo is Invalid ( Please Enter Valid Phone no - should start with 0-9 and length = 10 )
+              </small>
+              </div>
+    
+              
+              <div class="form-group">
+                <label>Password</label>
+                <input type="text" class="form-control" maxlength="15" style="width:500px;height: 30px;"
+                  #pass="ngModel" required pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$"
+                  name="password" [(ngModel)]='userDetailsModel.pass'>
+                  <small class="text-danger" *ngIf="pass.errors?.required && pass.touched">
+                    Password is required ( It should not be Null !)
+                  </small>
+                  <small class="text-danger" *ngIf="pass.errors?.pattern && pass.touched">
+                    Password is Invalid. "Atleast One UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)"
+                  </small>
+  
+              </div>
+    
+              <div class="row float-right" style="margin-top: 20px;">
+                  <button class="btn" routerLink="/">Cancel</button>
+                  <button  [disabled]="userData.form.invalid"
+                    class="btn btn-primary" (click)="register()">Register</button>
+                </div>
+      
+              </form>
+            </div>
+          </div>
+        </div>      
+  </div>
+</div>

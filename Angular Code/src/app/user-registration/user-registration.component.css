@@ -1,0 +1,57 @@
+.profile{
+    position: absolute;
+    left: 80%;
+    top: 15px
+}
+h3{
+    text-align: center;
+    font-style: italic;
+}
+.logoutbtn{
+    display: inline-block;
+      font-weight: 400;
+      color: #212529;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: .25rem;
+      margin-left: 10px;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+  }
+  .logoutbtn:hover{
+    box-shadow: 0 5px 10px rgba(112, 112, 112, 0.35);
+    background-color: #f8f8f8;
+  }
+
+  .card{
+    height: auto;
+    width: 700px;
+    box-shadow: 0 5px 10px rgba(107, 107, 107, 0.35);
+}
+h4{
+  color: rgb(100, 100, 100);
+}
+label{
+  color:rgb(100, 100, 100)
+}
+.cardalign{
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%);
+  position: absolute;
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(49, 69, 255, 0.35);
+    background-color: #faf9f9;
+    transition: all 0.2s ease-in-out;
+}

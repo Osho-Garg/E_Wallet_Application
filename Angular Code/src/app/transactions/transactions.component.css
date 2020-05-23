@@ -1,0 +1,88 @@
+.container{
+    margin:50px;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    left: 11%;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    box-shadow: 0 5px 10px rgba(180, 180, 180, 0.952);
+}
+.card:hover{
+    background-color: #ffffff;
+    transform: translateY(-5px);
+}
+.profile{
+    position: absolute;
+    left: 80%;
+    top: 15px
+}
+h3{
+    text-align: center;
+    font-style: italic;
+}
+.logoutbtn{
+    display: inline-block;
+      font-weight: 400;
+      color: #212529;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      background-color: transparent;
+      border: 1px solid transparent;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: .25rem;
+      margin-left: 10px;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+  }
+  .amount{
+    position: absolute;
+    left: 74%;
+    top: 20px;
+    color:rgb(28, 172, 28);
+    font-weight: 700;
+    font-size: 18px;
+}
+  .logoutbtn:hover{
+    box-shadow: 0 5px 10px rgba(112, 112, 112, 0.35);
+    background-color: #f8f8f8;
+  }
+.transactionid{
+    position: absolute;
+    left: 80px;
+    top: 20px;
+    color: #575757;
+}
+.senderid{
+    position: absolute;
+    left: 270px;
+    top: 20px;
+    color: #575757;
+}
+.recieverid{
+    position: absolute;
+    left: 480px;
+    top: 20px;
+    color: #575757;
+}
+.date{
+    position: absolute;
+    left: 710px;
+    top: 20px;
+    color: #575757;
+}
+.sendamount{
+    position: absolute;
+    left: 910px;
+    top: 20px;
+    color: #575757;
+}

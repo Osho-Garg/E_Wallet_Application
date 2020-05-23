@@ -1,0 +1,47 @@
+
+    <h3><i class='fas fa-wallet' style='font-size:36px'></i>eWallet</h3>
+    <div class="profile">
+      <h6>{{userName}}&nbsp;&nbsp;<img routerLink="/profile" class="imageclass" src="../../assets/images/avatar.png" width=35>
+            <button (click)="logout()" id="butn" class="logoutbtn">Logout</button></h6>
+    </div>
+    <span class="amount"><i style="color: black;"></i>&nbsp;Rs. {{totalAmount}}</span>
+    <br/>
+    <hr>  
+    
+    <div id="twobuttons" class="row">
+        <button routerLink="/user/recharge-wallet" style="margin-right: 20px;" class="btn btn-primary">Recharge Now</button>
+        <button routerLink="/user/money-transfer" style="margin-left: 20px;" class="btn btn-primary">Transfer Money</button>
+    </div>
+
+    
+    <div class="container">
+        <h5>Latest Five Transactions</h5>
+        <div *ngFor="let cardx of fivedata index as i" class="card" data-toggle="collapse" >
+            <div class="card-body">
+                <div>
+                    <div>&nbsp;&nbsp;<i class="fas fa-exchange-alt" style="font-size: 25px;color: rgb(3, 91, 207);"></i>
+                        <div class="transactionid">
+                            <strong>Transaction ID :</strong>{{allData[i].traId}}
+                         </div>
+                         <div class="senderid">
+                            <strong>Sender Account :</strong>{{allData[i].senderAccId}}
+                         </div>
+                         <div class="recieverid">
+                            <strong>Reciever Account :</strong>{{allData[i].receiverAccId}}
+                         </div>
+                         <div class="date">
+                            <strong>Date :</strong>{{allData[i].time}}
+                         </div>
+                         <div class="sendamount">
+                            <strong><i class="fas fa-rupee-sign" style="color: black;"></i></strong><span style="color:rgb(28, 172, 28);">&nbsp; Rs. {{allData[i].amount}}</span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <a routerLink="/transactions" style="color: blue;cursor: pointer;margin-left: 940px;">See All Transaction</a>
+    </div>
+
+
